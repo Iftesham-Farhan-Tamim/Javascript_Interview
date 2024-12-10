@@ -177,13 +177,15 @@
 // console.log(names);
 
 
-// // question 6 - Return only names of students who scored more than 60.
+// // question 6 - Return total marks for students with marks greater than 60
+//                 after 20 marks have been added to those who scored less than 60
 
 // const totalMarks = students.map((stu) => {
 //     if (stu.marks < 60) {
 //         stu.marks += 20;
 //     }
 
+//     // console.log(stu);
 //     return stu;
 // })
 //  .filter((stu) => stu.marks > 60)
