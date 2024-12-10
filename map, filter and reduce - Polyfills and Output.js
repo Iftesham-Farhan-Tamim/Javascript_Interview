@@ -178,7 +178,7 @@
 
 
 // // question 6 - Return total marks for students with marks greater than 60
-//                 after 20 marks have been added to those who scored less than 60
+// //              after 20 marks have been added to those who scored less than 60.
 
 // const totalMarks = students.map((stu) => {
 //     if (stu.marks < 60) {
