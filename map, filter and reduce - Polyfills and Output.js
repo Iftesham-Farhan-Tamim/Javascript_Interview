@@ -104,16 +104,88 @@
 // console.log(sum);  // 10
 // ............................................................................................
 
-// ............................................................................................
+// // Practise sets
+
+// // Difference between map and for each (map vs foreach)
+
+// --> These both are array functions to loop through the items of the array
+
+// --> Use map() when you need to transform data and create a new array.
+
+// --> Use forEach() when you simply want to iterate through an array and perform 
+// --> actions (like side effects) without needing a return value, Returns undefined.
+
+// const arr = [2, 5, 3, 4, 7];
+
+// const mapResult = arr.map((ar) => {
+//     return ar+2;
+// });
+
+// const forEachResult = arr.forEach((ar) => {
+//     return ar+2;
+// });
+
+// const forEachResult1 = arr.forEach((ar, i) => {
+//     arr[i] = ar + 3;
+// });
+
+// console.log(mapResult, forEachResult, forEachResult1);  // [4, 7, 5, 6, 9] undefined
 
 // ............................................................................................
 
-// ............................................................................................
+// // map, filter and reduce - O/P Based Questions
+// // Question 1 - Return only name of students in Capital
 
-// ............................................................................................
+// let students = [
+//     { name: "Piyush", rollNumber: 31, marks: 80 },
+//     { name: "Jenny", rollNumber: 15, marks: 69 },
+//     { name: "kaushal", rollNumber: 16, marks: 35 },
+//     { name: "Dilpreet", rollNumber: 7, marks: 55 },
+// ];
 
-// ............................................................................................
+// // let names = [];
+// // for(let i=0; i<students.length; i++) {
+// //     names.push(students[i].name.toUpperCase());
+// // }
 
-// ............................................................................................
+// const names = students.map((stu) => stu.name.toUpperCase());
 
-// ............................................................................................
+// console.log(names);
+
+
+// // question 2 - Return only details of those who scored more than 60 marks
+
+// const details = students.filter((stu) => stu.marks > 60);
+// console.log(details);
+
+
+// // question 3 - More than 60 marks and rollNumber greater than 15
+
+// const details = students.filter((stu) => stu.marks > 60 && stu.rollNumber > 15);
+// console.log(details);
+
+
+// // question 4 - More than 60 marks and rollNumber greater than 15
+
+// const sum = students.reduce((acc, curr) => acc + curr.marks, 0);
+// console.log(sum);
+
+
+// // question 5 - Return only names of students who scored more than 60.
+
+// const names = students.filter((stu) => stu.marks > 60).map((stu) => stu.name);
+// console.log(names);
+
+
+// // question 6 - Return only names of students who scored more than 60.
+
+// const totalMarks = students.map((stu) => {
+//     if (stu.marks < 60) {
+//         stu.marks += 20;
+//     }
+
+//     return stu;
+// })
+//  .filter((stu) => stu.marks > 60)
+//  .reduce((acc, curr) => acc + curr.marks, 0);
+// console.log(totalMarks);
